@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
+    background-color:#f7f7f7;
     display: grid;
     justify-content: center;
     margin: 0;
@@ -52,7 +52,7 @@ main h1 {
     color: black;
     text-transform: uppercase;
     border-radius: 0.25rem;
-    transition: 0.3s;
+    transition: 0.03s;
     text-align: center;
     display: block;
     white-space: normal;
@@ -62,12 +62,12 @@ main h1 {
     border: 0.125rem solid darkred;
 }
 
-
 .conteudo {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
+    width: 100%;
     align-items: stretch;
 }
 
@@ -123,7 +123,6 @@ main h1 {
     background-color: darkred;
 }
 
-
 .vantagens {
     background-color: rgb(236, 236, 236);
     align-items: center;
@@ -139,7 +138,6 @@ main h1 {
 .subtitulo {
     padding: 1.5rem;
 }
-
 
 .informacoes {
     padding: 30px;
@@ -179,4 +177,57 @@ main h1 {
     box-sizing: border-box;
     margin-top: 4rem;
     text-align: center;
+}
+
+@media (max-width: 860px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }   
+
+    .vantagens h1 {
+        font-size: 2.5rem;
+    }
+
+    .informacoes {
+        padding: 20px;
+    }
+    
+    main h1 {
+        font-size: 2.5rem;
+    }
+    
+    .introducao h1 {
+        font-size: 1.8rem;
+    }
+    
+    .introducao h1::before {
+        top: -3rem;
+        right: -1.5rem;
+    }
+    
+    .introducao {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav ul {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .nav ul li {
+        width: 100%;
+    }
+    
+    main {
+        margin-top: 4rem;
+    }
+    
+    .vantagens h1 {
+        font-size: 2rem;
+    }
 }
